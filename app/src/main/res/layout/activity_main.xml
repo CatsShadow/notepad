@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#003366"
+    android:orientation="vertical"
+    android:theme="@android:style/Theme.Black.NoTitleBar"
+    tools:context=".MainActivity"
+    tools:ignore="ExtraText">
+
+    <EditText
+        android:id="@+id/input"
+        android:layout_width="300dp"
+        android:layout_height="400dp"
+        android:autofillHints="Your note..."
+        android:background="@drawable/text"
+        android:ems="10"
+        android:inputType="textLongMessage|textMultiLine|text"
+        android:singleLine="false"
+        android:text='Button \"Load\" is loading your note from memory\nButton \"Save\" is saving your note to memory\nGood luck!'
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.16" />
+
+    <Button
+        android:id="@+id/load"
+        android:layout_width="74dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginLeft="52dp"
+        android:layout_marginTop="568dp"
+        android:background="@drawable/button"
+        android:text="@string/load"
+        android:onClick="load"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/input"
+        tools:ignore="OnClick" />
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="74dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="568dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginRight="56dp"
+        android:onClick="save"
+        android:background="@drawable/button"
+        android:text="@string/save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/input" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
